@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pârâu la Pițu</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f7fa;
+color: #12345a;
+}
+
+header {
+background: #12345a;
+color: white;
+padding: 25px;
+text-align: center;
+}
+
+.logo {
+font-size: 32px;
+font-weight: bold;
+color: #d4af37;
+}
+
+.container {
+max-width: 700px;
+margin: 40px auto;
+padding: 30px;
+background: white;
+border-radius: 18px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+h1 {
+text-align: center;
+}
+
+label {
+display: block;
+margin-top: 18px;
+font-weight: bold;
+}
+
+input, select {
+width: 100%;
+padding: 12px;
+margin-top: 7px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 16px;
+}
+
+button {
+width: 100%;
+margin-top: 25px;
+padding: 14px;
+border: none;
+border-radius: 8px;
+background: #d4af37;
+color: white;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+background: #b8941f;
+}
+
+.demo {
+text-align: center;
+margin-top: 20px;
+color: #777;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Pârâu la Pițu</div>
+<p>Airline</p>
+</header>
+
+<div class="container">
+
+<h1>Rezervă-ți zborul</h1>
+
+<label>Plecare</label>
+<input type="text" id="plecare" placeholder="Ex. Londra">
+
+<label>Destinație</label>
+<input type="text" id="destinatie" placeholder="Ex. Paris">
+
+<label>Data zborului</label>
+<input type="date" id="data">
+
+<label>Avion</label>
+<select id="avion">
+<option value="">Alege avionul</option>
+<option>Airbus A321neo — Economy</option>
+<option>Airbus A350 — Economy</option>
+<option>Airbus A350 — Business Class</option>
+<option>Airbus A350 — First Class</option>
+<option>Boeing 777 — Economy</option>
+<option>Boeing 777 — Business Class</option>
+<option>Boeing 777 — First Class</option>
+</select>
+
+<label>Prenume</label>
+<input type="text" id="prenume" placeholder="Prenumele tău">
+
+<label>Nume</label>
+<input type="text" id="nume" placeholder="Numele tău">
+
+<button onclick="continua()">Continuă</button>
+
+<div class="demo">
+DEMO — acesta este un bilet fictiv. Nu se efectuează plăți reale.
+</div>
+
+</div>
+
+<script>
+function continua() {
+
+const prenume = document.getElementById("prenume").value.trim();
+const nume = document.getElementById("nume").value.trim();
+
+if (prenume === "" || nume === "") {
+alert("Te rugăm să completezi prenumele și numele.");
+return;
+}
+
+alert("Perfect! Datele au fost completate. În pasul următor vom crea biletul.");
+}
+</script>
+
+</body>
+</html>
